@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cii Coffee</title>
+
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/ocr-a-std">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'OCR-A-STD', sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        .banner a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .fas {
+            cursor: pointer;
+        }
+
+        .cart-items-container {
+            display: none;
+            top: 40px;
+            right: 0;
+            position: absolute;
+            background: #fff;
+            width: 300px;
+        }
+
+        .search-form {
+            display: none;
+            top: 40px;
+            right: 0;
+            position: absolute;
+            background: #fff;
+            width: 150px;
+        }
+
+        /* Add additional styling as needed */
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#">Cii Coffee</a>
+        </div>
+        <nav>
+            <a href="#Trang-Chủ">Trang Chủ</a>
+            <a onclick="scrolltoId('about')" href="#About">About</a>
+            <a onclick="scrolltoId('menu')" href="#Menu">Menu</a>
+            <a onclick="scrolltoId('products')" href="#Products">Products</a>
+            <a onclick="scrolltoId('review')" href="#Đánh-Giá">Đánh giá</a>
+            <a onclick="scrolltoId('contact')" href="#Liên-Hệ">Liên Hệ</a>
+            <a onclick="scrolltoId('blogs')" href="#Blogs">Blogs</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div id="toggleButton"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="fa-solid fa-bars" id="menu-btn" class="menu"></div>
+        </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Oder Now">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <div class="cart-items-container menu">
+            <div class="cart-item">
+                <span class="fas fa-items"></span>
+                <!--  <img src="image/anh2.png" alt="">-->
+                <div class="content">
+                    <h3>Cart item 01</h3>
+                    <div class="price">50Vnd/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-items"></span>
+                <!--     <img src="image/anh2.png" alt="">-->
+                <div class="content">
+                    <h3>Cart item 02</h3>
+                    <div class="price">50Vnd/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-items"></span>
+                <!--    <img src="image/anh2.png" alt="">-->
+                <div class="content">
+                    <h3>Cart item 03</h3>
+                    <div class="price">50Vnd/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-items"></span>
+                <!--      <img src="image/anh2.png" alt="">-->
+                <div class="content">
+                    <h3>Cart item 04</h3>
+                    <div class="price">50Vnd/-</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--image slider start-->
+    <div class="slider">
+        <div class="slides">
+            <!--radio button start-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <input type="radio" name="radio-btn" id="radio6">
+            <input type="radio" name="radio-btn" id="radio7">
+            <!--radio button end-->
+            <!--Slider image start-->
+            <div class="slide first">
+                <img src="image/cf.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="image/cf.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="image/cf.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="image/cf.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="image/cf.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="image/cf.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="image/cf.jpg" alt="">
+            </div>
+            <!--Slider image end-->
+            <!--automatic navigation start-->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+                <div class="auto-btn6"></div>
+                <div class="auto-btn7"></div>
+            </div>
+            <!--automatic navigation end-->
+        </div>
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+            <label for="radio6" class="manual-btn"></label>
+            <label for="radio7" class="manual-btn"></label>
+        </div>
+        <!--manual navigation end-->
+    </div>
+    <!--image slider End-->
+
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 2000);
+        function scrolltoId(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+        }
+
+        document.getElementById('toggleButton').addEventListener('click', function () {
+            var menu = document.querySelector('.menu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        });
+        document.getElementById('search-btn').addEventListener('click', function () {
+            var search = document.querySelector('.search-form');
+            if (search.style.display === 'none' || search.style.display === '') {
+                search.style.display = 'block';
+            } else {
+                search.style.display = 'none';
+            }
+        });
+    </script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <!--home section starts-->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <H3>Cii Coffee xin chào quý khách</H3>
+            <p>Hãy để Cii Coffee phục vụ quý khách bằng cả tấm lòng.</p>
+            <a href="#" class="btn">Giúp Bạn Ngay Bây Giờ</a>
+        </div>
+    </section>
+
+    <!--home section end-->
+    <!--about section starts-->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>About</span> us </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="/image/coffee-563797_1280.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Điều gì khiến Coffee Cii được mọi người yêu thích và biết đến?</h3>
+                <p>Chính là Hương vị của Coffe chúng tôi luôn có những đổi mới,
+                    luôn bắt kịp theo trending xu hướng hiện tại cho giới trẻ.Ngoài ra
+                    có những view cho các nàng thơ sống ảo tuyệt đẹp</p>
+                <p>Vậy bạn còn chần chừ gì mà không đến Cii chúng tôi
+                    để thưởng thức 1 cốc coffe siêu ngon và chụp những tấm ảnh tuyệt đẹp</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--about section end-->
+    <!--menu section starts-->
+
+    <section class="menu" id="menu">
+        <h1 class="heading">Our <span> Menu</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="image/menu1.jpg" alt="">
+                <h3>Ngon và tốt cho sức khỏe</h3>
+                <div class="price">30.000Vnd <span>40.000Vnd</span></div>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+            <div class="box">
+                <img src="image/menu1.jpg" alt="">
+                <h3>Ngon và tốt cho sức khỏe</h3>
+                <div class="price">30.000Vnd <span>40.000Vnd</span></div>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+            <div class="box">
+                <img src="image/menu1.jpg" alt="">
+                <h3>Ngon và tốt cho sức khỏe</h3>
+                <div class="price">30.000Vnd <span>40.000Vnd</span></div>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+            <div class="box">
+                <img src="image/menu1.jpg" alt="">
+                <h3>Ngon và tốt cho sức khỏe</h3>
+                <div class="price">30.000Vnd <span>40.000Vnd</span></div>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+            <div class="box">
+                <img src="image/menu1.jpg" alt="">
+                <h3>Ngon và tốt cho sức khỏe</h3>
+                <div class="price">30.000Vnd <span>40.000Vnd</span></div>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+            <div class="box">
+                <img src="image/menu1.jpg" alt="">
+                <h3>Ngon và tốt cho sức khỏe</h3>
+                <div class="price">30.000Vnd <span>40.000Vnd</span></div>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+            <div class="box">
+                <img src="image/menu1.jpg" alt="">
+                <h3>Ngon và tốt cho sức khỏe</h3>
+                <div class="price">30.000Vnd <span>40.000Vnd</span></div>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+            <div class="box">
+                <img src="image/menu1.jpg" alt="">
+                <h3>Ngon và tốt cho sức khỏe</h3>
+                <div class="price">30.000Vnd <span>40.000Vnd</span></div>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+            <div class="box">
+                <img src="image/menu1.jpg" alt="">
+                <h3>Ngon và tốt cho sức khỏe</h3>
+                <div class="price">30.000Vnd <span>40.000Vnd</span></div>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+            <div class="box">
+                <img src="image/menu1.jpg" alt="">
+                <h3>Ngon và tốt cho sức khỏe</h3>
+                <div class="price">30.000Vnd <span>40.000Vnd</span></div>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--menu section end-->
+    <section class="products" id="products">
+        <h1 class="heading">Our <span> products</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/Ảnh chụp màn hình 2023-12-27 141243.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Bánh ngọt Socola</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">49.000Vnd <span> 69.000Vnd</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/Ảnh chụp màn hình 2023-12-27 141243.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Bánh ngọt Socola</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">49.000Vnd <span>69.000Vnd</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/Ảnh chụp màn hình 2023-12-27 141243.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Bánh ngọt Socola</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">49.000Vnd <span>69.000Vnd</span></div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--review section starts-->
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> Customer's <span>Review</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="image/R (1).jpg" alt="" class="quocte">
+                <p>Quán có không gian rộng rãi thoáng mát.View rất đẹp có cả bể bơi cho các nàng như mình sống ảo.
+                    Đồ uống ra nhanh mỗi người 1 vị nhưng theo mình cảm nhận thì khá ngon và vừa túi tiền.
+                    Đặc biệt các bạn nhân viên rất dễ thương và chu đáo,nên đến để trải nghiệm <br>
+                    Quán có người làm Web rất đẹp trai điểm 10!!!</p>
+                <img src="image/review1.png" class="user" alt="">
+                <h3>Bạn nữ giấu tên</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/R (1).jpg" alt="" class="quocte">
+                <p>Quán có không gian rộng rãi thoáng mát.View rất đẹp có cả bể bơi cho các nàng như mình sống ảo.
+                    Đồ uống ra nhanh mỗi người 1 vị nhưng theo mình cảm nhận thì khá ngon và vừa túi tiền.
+                    Đặc biệt các bạn nhân viên rất dễ thương và chu đáo,nên đến để trải nghiệm <br>
+                    Quán có người làm Web rất đẹp trai điểm 10!!!</p>
+                <img src="image/review2.png" class="user" alt="">
+                <h3>Bạn nữ giấu tên</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/R (1).jpg" alt="" class="quocte">
+                <p>Quán có không gian rộng rãi thoáng mát.View rất đẹp có cả bể bơi cho các nàng như mình sống ảo.
+                    Đồ uống ra nhanh mỗi người 1 vị nhưng theo mình cảm nhận thì khá ngon và vừa túi tiền.
+                    Đặc biệt các bạn nhân viên rất dễ thương và chu đáo,nên đến để trải nghiệm <br>
+                    Quán có người làm Web rất đẹp trai điểm 10!!!</p>
+                <img src="image/reviwe3.png" class="user" alt="">
+                <h3>Bạn nữ giấu tên</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa fa-star-half-alt"></i>
+                </div>
+            </div>
+
+    </section>
+
+    <!--review section end-->
+
+    <!--contact section starts-->
+
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>Liên hệ chúng tôi</span></h1>
+
+        <div class="row">
+
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.814802085009!2d105.82121707614314!3d21.593150980201134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313527b94e95db79%3A0x54600c8c274e68f6!2sCii%20Garden%20Coffee!5e0!3m2!1svi!2s!4v1703664995020!5m2!1svi!2s"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <form action="">
+                <h3>Liên Hệ Với Chúng Tôi</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="name">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="email">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="number">
+                </div>
+                <input type="submit" value="contact Now" class="btn">
+            </form>
+        </div>
+
+    </section>
+
+    <!--contact section ends-->
+    <!--blogs section starts-->
+
+    <section class="blogs" id="blogs">
+
+        <h1 class="heading">Our <span>blogs</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="image/blog1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">1 Cốc cà phê thơm ngon và giúp tỉnh táo hơn</a>
+                    <span>Được đăng bởi Hải Nam /14/10/2021</span>
+                    <p>Bạn nên uống 1 cốc cà phê vào mỗi buổi sáng</p>
+                    <a href="#" class="btn">Đọc Thêm</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="image/blog2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">1 Cốc cà phê thơm ngon và giúp tỉnh táo hơn</a>
+                    <span>Được đăng bởi Hải Nam /14/10/2021</span>
+                    <p>Bạn nên uống 1 cốc cà phê vào mỗi buổi sáng</p>
+                    <a href="#" class="btn">Đọc Thêm</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="image/blog3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">1 Cốc cà phê thơm ngon và giúp tỉnh táo hơn</a>
+                    <span>Được đăng bởi Hải Nam /14/10/2021</span>
+                    <p>Bạn nên uống 1 cốc cà phê vào mỗi buổi sáng</p>
+                    <a href="#" class="btn">Đọc Thêm</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--blogs section ends-->
+
+    <!-- footer section starts -->
+
+    <section class="footer">
+
+        <div class="share">
+            <a href="https://www.facebook.com/profile.php?id=61550063846662&mibextid=LQQJ4d"
+                class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+
+        <div class="links">
+            <a href="#">Trang Chủ</a>
+            <a href="#">About</a>
+            <a href="#">Menu</a>
+            <a href="#">Products</a>
+            <a href="#">Đánh Giá</a>
+            <a href="#">Liên Hệ</a>
+            <a href="#">Blogs</a>
+        </div>
+
+        <div class="credit">Created By <span>Mr.Nam Web Developer </span> | All Right Reserved</div>
+
+    </section>
+
+    <!-- footer section ends -->
+</body>
+
+</html>
